@@ -1,5 +1,23 @@
-build:
+build: daily_programmer
+
+daily_programmer: dp_352_easy 
+
+dp_352_easy:
 	nasm -f elf64 dp_352_easy.asm
 	ld -m elf_x86_64 dp_352_easy.o -o bin/dp_352_easy
 	rm dp_352_easy.o
-	bin/dp_352_easy
+
+project_euler: euler_1 euler_2
+
+euler_1:
+	nasm -f elf64 euler_1.asm
+	ld -m elf_x86_64 euler_1.o -o bin/euler_1
+	rm euler_1.o
+
+euler_2:
+	nasm -f elf64 euler_2.asm
+	ld -m elf_x86_64 euler_2.o -o bin/euler_2
+	rm euler_2.o
+
+test: euler_2
+	bin/euler_2
