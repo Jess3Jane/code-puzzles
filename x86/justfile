@@ -1,0 +1,5 @@
+build:
+	nasm -f elf64 dp_352_easy.asm
+	ld -m elf_x86_64 dp_352_easy.o -o bin/dp_352_easy
+	rm dp_352_easy.o
+	bin/dp_352_easy
