@@ -1,3 +1,7 @@
+;solution to https://www.reddit.com/r/dailyprogrammer/comments/7yyt8e/20180220_challenge_352_easy_making_imgurstyle/
+;basically just converts a number to base 62
+;in x64 because one of the numbers was bigger than 32 bits
+
 section .data
 alphabet	db	"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 lf		db	0Ah
